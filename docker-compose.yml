@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8009:8009"
+    restart: always # コンテナが停止すると常に再起動
+    tty: true
+    stdin_open: true
